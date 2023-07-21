@@ -4,8 +4,9 @@
     - name: An automatic remediation rule
       condition: event.outage == true
       action:
-        run_playbook:
+        run_job_template:
           name: remediate_outage.yml
+          organization: test
 
     - name: Print event with linux
       condition: event.target_os == "linux"
