@@ -1,5 +1,5 @@
 - hosts: all
-
+  name: Test
   rules:
     - name: An automatic remediation rule
       condition: event.outage == true
